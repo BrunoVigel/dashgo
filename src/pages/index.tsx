@@ -55,8 +55,8 @@ export default function SignIn() {
           onSubmit={handleSubmit(handleSignIn)}
         >
           <Stack spacing="4">
-            <Input name="email" type="email" error={errors.email} label="E-mail"  {...register('email')}/>
-            <Input name="password" type="password" error={errors.password} label="Senha" {...register('password')}/>
+            <Input name="email" type="email" error={errors.email} label="E-mail"  {...register('email')} defaultValue="brunorosav@gmail.com" isDisabled/>
+            <Input name="password" type="password" error={errors.password} label="Senha" {...register('password')} defaultValue="senha1234" isDisabled/>
       
       
           </Stack>
