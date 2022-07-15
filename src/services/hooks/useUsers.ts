@@ -19,7 +19,6 @@ export async function getUsers(page:number): Promise<GetUsersResponse>{
             page,
         }
     })
-    console.log(api)
 
     const totalCount = Number(headers['x-total-count'])
 
@@ -28,7 +27,7 @@ export async function getUsers(page:number): Promise<GetUsersResponse>{
             id: user.id,
             name: user.name,
             email: user.email,
-            createdAt: new Date(user.createdAt).toLocaleDateString('pt-Br', {
+            createdAt: new Date(+(new Date()) - Math.floor(Math.random()*10000000000)).toLocaleDateString('pt-Br', {
                 day: '2-digit',
                 month: 'long',
                 year: 'numeric'
